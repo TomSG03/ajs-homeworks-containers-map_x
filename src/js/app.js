@@ -1,7 +1,6 @@
-// import ErrorRepository from './ErrorRepository';
+// import Settings from './Settings';
 
-// const appError = new ErrorRepository();
+// const user = new Settings();
+// user.setUser.set('theme', 'gray');
 
-// console.log(appError.translate(13));
-// console.log(appError.translate(255));
-// console.log(appError.translate(1));
+// console.log(user.settings);
