@@ -1,20 +1,11 @@
-import Bowerman from './Bowerman';
-import Daemon from './Daemon';
-import Zombie from './Zombie';
+import ErrorRepository from './ErrorRepository';
 
-import Team from './Team';
+const appError = new ErrorRepository();
 
-const personBowerman = new Bowerman('Jack');
-const personDaemon = new Daemon('London');
-const personZombie = new Zombie('Victor');
+appError.add(255, 'Ok');
+appError.add(13, 'App error');
 
-const round = new Team();
+console.log(appError.translate(13));
+console.log(appError.translate(255));
+console.log(appError.translate(1));
 
-round.add(personBowerman);
-// round.add(personBowerman);
-
-round.addAll(personDaemon, personZombie, personZombie);
-
-const arrRound = round.toArray();
-
-console.log(arrRound);
